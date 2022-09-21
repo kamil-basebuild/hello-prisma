@@ -9,7 +9,7 @@ app.use(express.json());
 /**
  * Users
  */
-// Get users
+// Get all users
 app.get("/users", async (req, res) => {
   const users = await prisma.user.findMany({
     include: {
@@ -170,8 +170,8 @@ app.delete(`/post/:id`, async (req, res) => {
   res.json(post);
 });
 
-// Fetch all published posts
-app.get("/feed", async (req, res) => {
+// Get all published posts
+app.get("/posts", async (req, res) => {
   const { searchString, skip, take, orderBy } = req.query;
 
   const or: Prisma.PostWhereInput = searchString

@@ -12,7 +12,7 @@ const ERROR_NOT_FOUND = (id: string) =>
 
 // Get all posts (/)
 export const getPosts = async (req: Request, res: Response) => {
-  const { searchString, published, skip, take, orderBy } = req.query;
+  const { searchString, published, take, skip, orderBy } = req.query;
 
   const or: Prisma.PostWhereInput = searchString
     ? {
@@ -83,7 +83,7 @@ export const deletePost = async (req: Request, res: Response) => {
   res.json(post);
 };
 
-// Increase view count of post with id `id` (/:id/views)
+// Increase view count of post with id `id` by 1 (/:id/views)
 export const increasePostViewCount = async (req: Request, res: Response) => {
   const { id } = req.params;
   try {

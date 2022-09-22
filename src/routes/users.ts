@@ -9,7 +9,7 @@ import {
   getUser,
   getUserDrafts,
   addUser,
-} from "#src/controllers/UsersController";
+} from "#src/controllers/usersController";
 
 const router = express.Router();
 

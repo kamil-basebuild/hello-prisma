@@ -13,7 +13,7 @@ import {
   deletePost,
   increasePostViewCount,
   togglePostPublishedState,
-} from "#src/controllers/PostsController";
+} from "#src/controllers/postsController";
 
 router.get("/", getPosts);
 router.post("/", addPost);

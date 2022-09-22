@@ -2,7 +2,7 @@
  * Users routes.
  */
 
-import express from "express";
+import express, { Request, Response, NextFunction } from "express";
 
 import {
   getUsers,
@@ -14,7 +14,7 @@ import {
 const router = express.Router();
 
 // Users-specific middleware
-router.use((req, res, next) => {
+router.use((req: Request, res: Response, next: NextFunction) => {
   console.log("Time: ", Date.now());
   next();
 });

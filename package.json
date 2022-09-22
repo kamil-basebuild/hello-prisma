@@ -5,9 +5,9 @@
   "author": "",
   "license": "ISC",
   "keywords": [],
-  "main": "index.ts",
+  "main": "src/index.ts",
   "scripts": {
-    "dev": "ts-node index.ts"
+    "dev": "ts-node src/index.ts"
   },
   "dependencies": {
     "@prisma/client": "^4.3.1",
